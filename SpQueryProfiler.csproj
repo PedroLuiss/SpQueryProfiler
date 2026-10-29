@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+    <!-- Dependencia transitiva de Microsoft.Data.SqlClient; se fija para evitar NU1902/NU1903 (CVE-2026-84008, CVE-2026-70162). -->
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="9.0.22" />
     <PackageReference Include="Spectre.Console" Version="0.57.2" />
     <PackageReference Include="System.CommandLine" Version="3.0.0-rc.3.26522.148" />
   </ItemGroup>
